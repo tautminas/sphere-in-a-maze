@@ -1,9 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwb1d1h2tc23u"]
+[gd_scene load_steps=6 format=3 uid="uid://cyhvniedkv4gs"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ummh1"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_vuu1w"]
+sky_material = SubResource("ProceduralSkyMaterial_ummh1")
+
+[sub_resource type="Environment" id="Environment_lco75"]
+background_mode = 2
+sky = SubResource("Sky_vuu1w")
+tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_0n11k"]
 size = Vector3(100, 0.1, 100)
 
+[sub_resource type="SphereMesh" id="SphereMesh_xnhxw"]
+radius = 1.0
+height = 2.0
+
 [node name="Node3D" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lco75")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="GroundMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_0n11k")
+
+[node name="SphereMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23, 0)
+mesh = SubResource("SphereMesh_xnhxw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.0240832, 0, -0.99971, 0, 1, 0, 0.99971, 0, -0.0240832, -11, 22, 0)
