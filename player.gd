@@ -27,5 +27,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if "Goal" in body.get_groups():
-		print("You win!")
-		print(body.name)
+		complete_level(body.file_path)
+		
+
+func complete_level(next_level_file: String) -> void:
+	get_tree().change_scene_to_file(next_level_file)
