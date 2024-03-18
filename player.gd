@@ -16,3 +16,9 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_pressed("down"):
 		apply_central_force(Vector3.BACK * delta * 1000.0)
+
+
+func _on_body_entered(body: Node) -> void:
+	if "Goal" in body.get_groups():
+		print("You win!")
+		print(body.name)

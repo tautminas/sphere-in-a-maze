@@ -10,6 +10,8 @@ height = 2.0
 radius = 1.0
 
 [node name="Player" type="RigidBody3D"]
+max_contacts_reported = 10
+contact_monitor = true
 linear_damp = 1.0
 angular_damp = 3.0
 script = ExtResource("1_ummwh")
@@ -19,3 +21,5 @@ mesh = SubResource("SphereMesh_xnhxw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_wtmt5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
