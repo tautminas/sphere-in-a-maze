@@ -3,11 +3,8 @@
 [ext_resource type="Script" path="res://player.gd" id="1_ummwh"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_xnhxw"]
-radius = 1.0
-height = 2.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wtmt5"]
-radius = 1.0
 
 [node name="Player" type="RigidBody3D"]
 max_contacts_reported = 10

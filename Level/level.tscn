@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://2kvn12xg8s8p"]
+[gd_scene load_steps=10 format=3 uid="uid://2kvn12xg8s8p"]
 
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="1_ouy0f"]
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_r13av"]
+[ext_resource type="Texture2D" uid="uid://c26r518omu7ua" path="res://Level/level_1.png" id="3_fvkbp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u31xn"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -54,7 +55,11 @@ script = ExtResource("1_r13av")
 file_path = "res://Level/level_2.tscn"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.907777, 0.419452, 0, -0.419452, 0.907777, 0, 7, 13)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_ouy0f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 1.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0.9, 0)
+
+[node name="MazeImage" type="Sprite3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, -10, 0, 10, -4.37114e-07, 0, 0.5, 0)
+texture = ExtResource("3_fvkbp")
