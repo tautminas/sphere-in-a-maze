@@ -1,0 +1,155 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs3o30w2jthrm"]
+
+[ext_resource type="Script" path="res://Menu/level_selection.gd" id="1_xxq8s"]
+
+[sub_resource type="SystemFont" id="SystemFont_0eseu"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_4jqoc"]
+font_names = PackedStringArray("Impact")
+
+[node name="SelectionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xxq8s")
+level_1_path = "res://Level/level_1.tscn"
+level_2_path = "res://Level/level_2.tscn"
+level_3_path = "res://Level/level_3.tscn"
+level_4_path = "res://Level/level_4.tscn"
+level_5_path = "res://Level/level_5.tscn"
+level_6_path = "res://Level/level_6.tscn"
+level_7_path = "res://Level/level_7.tscn"
+level_8_path = "res://Level/level_8.tscn"
+level_9_path = "res://Level/level_9.tscn"
+level_10_path = "res://Level/level_10.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = SubResource("SystemFont_0eseu")
+theme_override_font_sizes/font_size = 64
+text = "Select level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Level1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 1"
+
+[node name="Level3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 3"
+
+[node name="Level5" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 5"
+
+[node name="Level7" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 7"
+
+[node name="Level9" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 9"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Level2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 2"
+
+[node name="Level4" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 4"
+
+[node name="Level6" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 6"
+
+[node name="Level8" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 8"
+
+[node name="Level10" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Level 10"

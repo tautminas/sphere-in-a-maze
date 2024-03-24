@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://4o0wlfctgyv4"]
 
-[ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_pg7lq"]
+[ext_resource type="Script" path="res://Menu/main_menu.gd" id="1_pg7lq"]
 
 [sub_resource type="SystemFont" id="SystemFont_0eseu"]
 font_names = PackedStringArray("Impact")
@@ -16,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pg7lq")
-file_path = "res://Level/level_1.tscn"
+file_path = "res://Menu/level_selection.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
