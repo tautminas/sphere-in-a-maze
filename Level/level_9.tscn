@@ -44,7 +44,7 @@ size = Vector3(100, 1, 100)
 material = SubResource("StandardMaterial3D_0q7et")
 
 [node name="StartPad" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067, 0.05, -15.1317)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067, 0.05, -14.5346)
 use_collision = true
 size = Vector3(1.1, 0.1, 1.1)
 material = SubResource("StandardMaterial3D_hvt0v")
@@ -61,7 +61,7 @@ file_path = "res://Level/level_10.tscn"
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 34, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_ptnlq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356328, 0.6, -14.912)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067, 0.6, -14.535)
 
 [node name="MazeImage" type="Sprite3D" parent="."]
 transform = Transform3D(15, 0, 0, 0, -6.55671e-07, -15, 0, 15, -6.55671e-07, 0, 0.5, 0)
@@ -221,7 +221,7 @@ size = Vector3(0.5, 2, 5)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="Wall30" type="CSGBox3D" parent="Walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.44705, 1, -1.02636)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.40859, 1, -1.02636)
 use_collision = true
 size = Vector3(0.5, 2, 5)
 material = SubResource("StandardMaterial3D_2ppxr")
@@ -511,7 +511,7 @@ material = SubResource("StandardMaterial3D_2ppxr")
 [node name="Wall3" type="CSGBox3D" parent="Walls"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0831088, 1, -15.7511)
 use_collision = true
-size = Vector3(0.5, 2, 31.5)
+size = Vector3(0.5, 2, 31.4)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="Wall4" type="CSGBox3D" parent="Walls"]
