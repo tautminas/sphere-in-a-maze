@@ -1,12 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://4o0wlfctgyv4"]
+[gd_scene load_steps=7 format=3 uid="uid://4o0wlfctgyv4"]
 
 [ext_resource type="Script" path="res://Menu/main_menu.gd" id="1_pg7lq"]
+[ext_resource type="Texture2D" uid="uid://yxbr0ghdt4ys" path="res://Menu/background.png" id="2_mryto"]
 
 [sub_resource type="SystemFont" id="SystemFont_0eseu"]
-font_names = PackedStringArray("Impact")
+font_names = PackedStringArray("Monospace")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m85da"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.776471, 0.803922, 0.827451, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_xaevc"]
+Button/styles/normal = SubResource("StyleBoxFlat_m85da")
 
 [sub_resource type="SystemFont" id="SystemFont_4jqoc"]
-font_names = PackedStringArray("Impact")
+font_names = PackedStringArray("Monospace")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -25,6 +38,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_mryto")
+flip_h = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -47,13 +62,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 24
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_0eseu")
 theme_override_font_sizes/font_size = 64
-text = "GAME TITLE"
+text = "SPHERE IN A MAZE"
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -70,13 +85,15 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
-text = "Start Game"
+text = "Start"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
-text = "Exit Game"
+text = "Exit"

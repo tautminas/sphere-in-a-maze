@@ -1,12 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs3o30w2jthrm"]
+[gd_scene load_steps=7 format=3 uid="uid://bs3o30w2jthrm"]
 
 [ext_resource type="Script" path="res://Menu/level_selection.gd" id="1_xxq8s"]
+[ext_resource type="Texture2D" uid="uid://yxbr0ghdt4ys" path="res://Menu/background.png" id="2_o1und"]
 
-[sub_resource type="SystemFont" id="SystemFont_0eseu"]
-font_names = PackedStringArray("Impact")
+[sub_resource type="SystemFont" id="SystemFont_gqbmd"]
+font_names = PackedStringArray("Monospace")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m85da"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.776471, 0.803922, 0.827451, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_xaevc"]
+Button/styles/normal = SubResource("StyleBoxFlat_m85da")
 
 [sub_resource type="SystemFont" id="SystemFont_4jqoc"]
-font_names = PackedStringArray("Impact")
+font_names = PackedStringArray("Monospace")
 
 [node name="SelectionMenu" type="Control"]
 layout_mode = 3
@@ -34,6 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_o1und")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -54,15 +68,15 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 24
-theme_override_fonts/font = SubResource("SystemFont_0eseu")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_gqbmd")
 theme_override_font_sizes/font_size = 64
-text = "Select level"
+text = "SELECT LEVEL"
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -79,6 +93,7 @@ layout_mode = 2
 [node name="Level1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 1"
@@ -86,6 +101,7 @@ text = "Level 1"
 [node name="Level3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 3"
@@ -93,6 +109,7 @@ text = "Level 3"
 [node name="Level5" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 5"
@@ -100,6 +117,7 @@ text = "Level 5"
 [node name="Level7" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 7"
@@ -107,6 +125,7 @@ text = "Level 7"
 [node name="Level9" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 9"
@@ -122,6 +141,7 @@ layout_mode = 2
 [node name="Level2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 2"
@@ -129,6 +149,7 @@ text = "Level 2"
 [node name="Level4" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 4"
@@ -136,6 +157,7 @@ text = "Level 4"
 [node name="Level6" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 6"
@@ -143,6 +165,7 @@ text = "Level 6"
 [node name="Level8" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 8"
@@ -150,6 +173,7 @@ text = "Level 8"
 [node name="Level10" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 10"
