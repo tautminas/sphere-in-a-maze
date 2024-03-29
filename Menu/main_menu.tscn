@@ -6,7 +6,7 @@
 [sub_resource type="SystemFont" id="SystemFont_0eseu"]
 font_names = PackedStringArray("Monospace")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m85da"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8iib"]
 bg_color = Color(0, 0, 0, 1)
 border_color = Color(0.776471, 0.803922, 0.827451, 1)
 border_blend = true
@@ -16,7 +16,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="Theme" id="Theme_xaevc"]
-Button/styles/normal = SubResource("StyleBoxFlat_m85da")
+Button/styles/normal = SubResource("StyleBoxFlat_a8iib")
 
 [sub_resource type="SystemFont" id="SystemFont_4jqoc"]
 font_names = PackedStringArray("Monospace")
@@ -29,7 +29,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pg7lq")
-file_path = "res://Menu/level_selection.tscn"
+start_path = "res://Menu/level_selection.tscn"
+controls_path = "res://Menu/controls.tscn"
+credits_path = "res://Menu/credits.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -89,6 +91,22 @@ theme = SubResource("Theme_xaevc")
 theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Start"
+
+[node name="ControlsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme = SubResource("Theme_xaevc")
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Controls"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme = SubResource("Theme_xaevc")
+theme_override_fonts/font = SubResource("SystemFont_4jqoc")
+theme_override_font_sizes/font_size = 24
+text = "Credits"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)

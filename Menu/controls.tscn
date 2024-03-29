@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm50d1quf53qc"]
+
+[ext_resource type="Texture2D" uid="uid://yxbr0ghdt4ys" path="res://Menu/background.png" id="2_yrn6f"]
+
+[sub_resource type="SystemFont" id="SystemFont_gqbmd"]
+font_names = PackedStringArray("Monospace")
+
+[node name="ControlsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yrn6f")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_gqbmd")
+theme_override_font_sizes/font_size = 40
+text = "Up: ↑ / W
+Left: ← / A
+Right: → / D
+Down: ↓ / S"
+horizontal_alignment = 1
+vertical_alignment = 1
