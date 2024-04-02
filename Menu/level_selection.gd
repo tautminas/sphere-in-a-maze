@@ -38,6 +38,10 @@ func _ready() -> void:
 	level_10.button_down.connect(on_level_10_pressed)
 	menu_button.button_down.connect(on_menu_pressed)
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("escape"):
+		on_menu_pressed()
+
 func on_level_1_pressed() -> void:
 	get_tree().change_scene_to_file(level_1_path)
 
