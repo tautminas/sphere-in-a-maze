@@ -21,14 +21,14 @@ Button/styles/normal = SubResource("StyleBoxFlat_m85da")
 [sub_resource type="SystemFont" id="SystemFont_4jqoc"]
 font_names = PackedStringArray("Monospace")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3cij"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mqh6"]
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="Theme" id="Theme_wi25v"]
-Button/styles/normal = SubResource("StyleBoxFlat_g3cij")
+Button/styles/normal = SubResource("StyleBoxFlat_6mqh6")
 
 [node name="SelectionMenu" type="Control"]
 layout_mode = 3

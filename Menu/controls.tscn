@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm50d1quf53qc"]
+[gd_scene load_steps=6 format=3 uid="uid://dm50d1quf53qc"]
 
+[ext_resource type="Script" path="res://Menu/controls.gd" id="1_trj6f"]
 [ext_resource type="Texture2D" uid="uid://yxbr0ghdt4ys" path="res://Menu/background.png" id="2_yrn6f"]
 
 [sub_resource type="SystemFont" id="SystemFont_gqbmd"]
 font_names = PackedStringArray("Monospace")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0p71"]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_j6of4"]
+Button/styles/normal = SubResource("StyleBoxFlat_h0p71")
 
 [node name="ControlsMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +22,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_trj6f")
+menu_path = "res://Menu/main_menu.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -49,3 +61,19 @@ Right: → / D
 Down: ↓ / S"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -46.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_j6of4")
+text = "Menu"

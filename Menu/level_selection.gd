@@ -12,7 +12,6 @@ extends Control
 @onready var level_10: Button = $MarginContainer/HBoxContainer/VBoxContainer2/Level10
 @onready var menu_button: Button = $MenuButton
 
-
 @export_file("*.tscn") var level_1_path
 @export_file("*.tscn") var level_2_path
 @export_file("*.tscn") var level_3_path
