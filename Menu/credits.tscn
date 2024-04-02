@@ -6,14 +6,14 @@
 [sub_resource type="SystemFont" id="SystemFont_ihcnf"]
 font_names = PackedStringArray("Monospace")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3cij"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ku573"]
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="Theme" id="Theme_715lm"]
-Button/styles/normal = SubResource("StyleBoxFlat_g3cij")
+Button/styles/normal = SubResource("StyleBoxFlat_ku573")
 
 [node name="CreditsMenu" type="Control"]
 layout_mode = 3
