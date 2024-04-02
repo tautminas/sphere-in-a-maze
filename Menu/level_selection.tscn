@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs3o30w2jthrm"]
+[gd_scene load_steps=9 format=3 uid="uid://bs3o30w2jthrm"]
 
 [ext_resource type="Script" path="res://Menu/level_selection.gd" id="1_xxq8s"]
 [ext_resource type="Texture2D" uid="uid://yxbr0ghdt4ys" path="res://Menu/background.png" id="2_o1und"]
@@ -20,6 +20,15 @@ Button/styles/normal = SubResource("StyleBoxFlat_m85da")
 
 [sub_resource type="SystemFont" id="SystemFont_4jqoc"]
 font_names = PackedStringArray("Monospace")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3cij"]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_wi25v"]
+Button/styles/normal = SubResource("StyleBoxFlat_g3cij")
 
 [node name="SelectionMenu" type="Control"]
 layout_mode = 3
@@ -191,4 +200,5 @@ offset_right = -15.0
 offset_bottom = -15.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = SubResource("Theme_wi25v")
 text = "Menu"
