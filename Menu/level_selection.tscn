@@ -48,6 +48,7 @@ level_7_path = "res://Level/level_7.tscn"
 level_8_path = "res://Level/level_8.tscn"
 level_9_path = "res://Level/level_9.tscn"
 level_10_path = "res://Level/level_10.tscn"
+menu_path = "res://Menu/main_menu.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -187,7 +188,7 @@ theme_override_fonts/font = SubResource("SystemFont_4jqoc")
 theme_override_font_sizes/font_size = 24
 text = "Level 10"
 
-[node name="Button" type="Button" parent="."]
+[node name="MenuButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

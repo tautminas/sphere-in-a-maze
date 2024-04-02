@@ -10,6 +10,8 @@ extends Control
 @onready var level_8: Button = $MarginContainer/HBoxContainer/VBoxContainer2/Level8
 @onready var level_9: Button = $MarginContainer/HBoxContainer/VBoxContainer/Level9
 @onready var level_10: Button = $MarginContainer/HBoxContainer/VBoxContainer2/Level10
+@onready var menu_button: Button = $MenuButton
+
 
 @export_file("*.tscn") var level_1_path
 @export_file("*.tscn") var level_2_path
@@ -21,6 +23,7 @@ extends Control
 @export_file("*.tscn") var level_8_path
 @export_file("*.tscn") var level_9_path
 @export_file("*.tscn") var level_10_path
+@export_file("*.tscn") var menu_path
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +37,7 @@ func _ready() -> void:
 	level_8.button_down.connect(on_level_8_pressed)
 	level_9.button_down.connect(on_level_9_pressed)
 	level_10.button_down.connect(on_level_10_pressed)
+	menu_button.button_down.connect(on_menu_pressed)
 
 func on_level_1_pressed() -> void:
 	get_tree().change_scene_to_file(level_1_path)
@@ -64,3 +68,6 @@ func on_level_9_pressed() -> void:
 
 func on_level_10_pressed() -> void:
 	get_tree().change_scene_to_file(level_10_path)
+
+func on_menu_pressed() -> void:
+	get_tree().change_scene_to_file(menu_path)
