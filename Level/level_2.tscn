@@ -60,7 +60,7 @@ script = ExtResource("1_pww1t")
 file_path = "res://Level/level_3.tscn"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 16, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 16.5, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_2dkny")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.209, 0.6, -6.149)
@@ -123,7 +123,7 @@ material = SubResource("StandardMaterial3D_2ppxr")
 [node name="Wall21" type="CSGBox3D" parent="Walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0834937, 1, 5.76629)
 use_collision = true
-size = Vector3(0.5, 2, 3)
+size = Vector3(0.5, 2, 2.8)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="Wall22" type="CSGBox3D" parent="Walls"]
@@ -181,7 +181,7 @@ size = Vector3(0.5, 2, 2.5)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="Wall9" type="CSGBox3D" parent="Walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.07881, 1, 4.52247)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.08292, 1, 4.52247)
 use_collision = true
 size = Vector3(0.5, 2, 2.5)
 material = SubResource("StandardMaterial3D_2ppxr")

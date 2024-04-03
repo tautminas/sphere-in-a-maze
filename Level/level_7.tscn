@@ -60,7 +60,7 @@ script = ExtResource("1_ybd6n")
 file_path = "res://Level/level_8.tscn"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 28, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 26.8, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_bmsc5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.067, 0.6, -11.798)
