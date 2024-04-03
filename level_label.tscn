@@ -4,6 +4,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_yunss"]
 font_names = PackedStringArray("Monospace")
+subpixel_positioning = 0
 
 [node name="LevelLabelControl" type="Control"]
 layout_mode = 3

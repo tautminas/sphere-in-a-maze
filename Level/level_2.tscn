@@ -127,7 +127,7 @@ size = Vector3(0.5, 2, 2.8)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="Wall22" type="CSGBox3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51386, 1.00739, -3.52983)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.514, 1, -3.54123)
 use_collision = true
 size = Vector3(0.5, 2, 3)
 material = SubResource("StandardMaterial3D_2ppxr")
