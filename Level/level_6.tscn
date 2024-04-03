@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwolqfgbdv6c1"]
+[gd_scene load_steps=13 format=3 uid="uid://cwolqfgbdv6c1"]
 
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_sbr3c"]
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="2_s0ukj"]
 [ext_resource type="Texture2D" uid="uid://c7su0cpk86jsq" path="res://Level/level_6.png" id="2_yopi8"]
 [ext_resource type="PackedScene" uid="uid://jub3svcbyt6m" path="res://Level/back_button.tscn" id="4_ymit6"]
+[ext_resource type="PackedScene" uid="uid://cpl1i1vspi4jd" path="res://level_label.tscn" id="5_lv17s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u31xn"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -376,5 +377,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.158
 use_collision = true
 size = Vector3(0.5, 2, 23.67)
 material = SubResource("StandardMaterial3D_2ppxr")
+
+[node name="LevelLabelControl" parent="." instance=ExtResource("5_lv17s")]
+level_description = "Level 6: 10 X 10"
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_ymit6")]

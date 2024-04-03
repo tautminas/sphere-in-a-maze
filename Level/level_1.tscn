@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://2kvn12xg8s8p"]
+[gd_scene load_steps=17 format=3 uid="uid://2kvn12xg8s8p"]
 
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="1_ouy0f"]
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_r13av"]
 [ext_resource type="Texture2D" uid="uid://c26r518omu7ua" path="res://Level/level_1.png" id="3_fvkbp"]
 [ext_resource type="PackedScene" uid="uid://jub3svcbyt6m" path="res://Level/back_button.tscn" id="4_nso7i"]
+[ext_resource type="PackedScene" uid="uid://cpl1i1vspi4jd" path="res://level_label.tscn" id="5_lthx7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u31xn"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -120,7 +121,7 @@ size = Vector3(0.5, 2, 2.5)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="Wall2" type="CSGBox3D" parent="Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0955, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0955, 1, -0.0167555)
 use_collision = true
 size = Vector3(0.5, 2, 12)
 material = SubResource("StandardMaterial3D_lee3d")
@@ -166,5 +167,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.398
 use_collision = true
 size = Vector3(0.5, 2, 2.5)
 material = SubResource("StandardMaterial3D_h3055")
+
+[node name="LevelLabelControl" parent="." instance=ExtResource("5_lthx7")]
+level_description = "Level 1: 5 X 5"
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_nso7i")]
