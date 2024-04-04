@@ -58,6 +58,7 @@ size = Vector3(1.1, 0.1, 1.1)
 material = SubResource("StandardMaterial3D_4n4e1")
 script = ExtResource("1_q08u6")
 file_path = "res://Level/level_4.tscn"
+level_number = 3
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 18, 0)

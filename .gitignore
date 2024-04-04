@@ -2,3 +2,5 @@
 .godot/
 
 *.tmp
+
+level_data.json

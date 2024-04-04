@@ -6,6 +6,8 @@ extends RigidBody3D
 ## How much force to apply when jumping.
 @export var thrust: float = 2500.0
 
+const LEVEL_DATA_PATH = "res://level_data.json"
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("jump"):
@@ -27,10 +29,39 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node) -> void:
 	if "Goal" in body.get_groups():
 		complete_level(body.file_path)
-		
+		save_completed_level(body.level_number)
+
 
 func complete_level(next_level_file: String) -> void:
 	set_process(false)
 	var tween = create_tween()
 	tween.tween_interval(1.0)
 	tween.tween_callback(get_tree().change_scene_to_file.bind(next_level_file))
+
+
+func save_completed_level(level: int) -> void:
+	var completed_levels = []
+	
+	# Read completed levels
+	if FileAccess.file_exists(LEVEL_DATA_PATH):
+		var data_file = FileAccess.open(LEVEL_DATA_PATH, FileAccess.READ)
+		var parsed_result = JSON.parse_string(data_file.get_as_text())
+		if parsed_result is Dictionary:
+			completed_levels = parsed_result["completedLevels"]
+	
+	# Write completed levels
+	completed_levels.append(level)
+	var dict_for_unique_val = {}
+	for item in completed_levels:
+		dict_for_unique_val[item] = true
+	completed_levels = dict_for_unique_val.keys()
+	completed_levels.sort()
+
+	var file = FileAccess.open(LEVEL_DATA_PATH, FileAccess.WRITE)
+	var data : Dictionary = {
+		"completedLevels" : completed_levels,
+	}
+	var jstr = JSON.stringify(data)
+	file.store_line(jstr)
+	file.close()
+	print(completed_levels)
