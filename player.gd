@@ -64,4 +64,3 @@ func save_completed_level(level: int) -> void:
 	var jstr = JSON.stringify(data)
 	file.store_line(jstr)
 	file.close()
-	print(completed_levels)
