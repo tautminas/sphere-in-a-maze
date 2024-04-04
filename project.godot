@@ -13,6 +13,8 @@ config_version=5
 config/name="Sphere in a Maze"
 run/main_scene="res://Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [display]
