@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bs3o30w2jthrm"]
+[gd_scene load_steps=10 format=3 uid="uid://bs3o30w2jthrm"]
 
 [ext_resource type="Script" path="res://Menu/level_selection.gd" id="1_xxq8s"]
 [ext_resource type="Texture2D" uid="uid://yxbr0ghdt4ys" path="res://Menu/background.png" id="2_o1und"]
@@ -29,6 +29,10 @@ corner_radius_bottom_left = 4
 
 [sub_resource type="Theme" id="Theme_wi25v"]
 Button/styles/normal = SubResource("StyleBoxFlat_6mqh6")
+
+[sub_resource type="SystemFont" id="SystemFont_3p4vy"]
+font_names = PackedStringArray("Monospace")
+subpixel_positioning = 0
 
 [node name="SelectionMenu" type="Control"]
 layout_mode = 3
@@ -203,3 +207,20 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = SubResource("Theme_wi25v")
 text = "Menu"
+
+[node name="CompletedLevelsLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -118.0
+offset_right = 20.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3p4vy")
+text = "Test"

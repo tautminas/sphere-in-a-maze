@@ -11,6 +11,7 @@ extends Control
 @onready var level_9: Button = $MarginContainer/HBoxContainer/VBoxContainer/Level9
 @onready var level_10: Button = $MarginContainer/HBoxContainer/VBoxContainer2/Level10
 @onready var menu_button: Button = $MenuButton
+@onready var completed_levels_label: Label = $CompletedLevelsLabel
 
 @export_file("*.tscn") var level_1_path
 @export_file("*.tscn") var level_2_path
@@ -23,6 +24,7 @@ extends Control
 @export_file("*.tscn") var level_9_path
 @export_file("*.tscn") var level_10_path
 @export_file("*.tscn") var menu_path
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,6 +39,8 @@ func _ready() -> void:
 	level_9.button_down.connect(on_level_9_pressed)
 	level_10.button_down.connect(on_level_10_pressed)
 	menu_button.button_down.connect(on_menu_pressed)
+	
+	alter_completed_levels_label()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):
@@ -74,3 +78,29 @@ func on_level_10_pressed() -> void:
 
 func on_menu_pressed() -> void:
 	get_tree().change_scene_to_file(menu_path)
+
+func alter_completed_levels_label() -> void:
+	const LEVEL_DATA_PATH = "res://level_data.json"
+	var completed_levels = []
+	# Read completed levels
+	if FileAccess.file_exists(LEVEL_DATA_PATH):
+		var data_file = FileAccess.open(LEVEL_DATA_PATH, FileAccess.READ)
+		var parsed_result = JSON.parse_string(data_file.get_as_text())
+		if parsed_result is Dictionary:
+			completed_levels = parsed_result["completedLevels"]
+	# Remove duplicated from completed levels
+	var dict_for_unique_val = {}
+	for item in completed_levels:
+		dict_for_unique_val[item] = true
+	completed_levels = dict_for_unique_val.keys()
+	# Prepare string about completed levels
+	var completed_levels_notification = "Completed levels: "
+	for i in completed_levels:
+		completed_levels_notification += str(i) + ", "
+	completed_levels_notification = completed_levels_notification.substr(0, completed_levels_notification.length() - 2)
+	if len(completed_levels) == 0:
+		completed_levels_notification = "No completed levels so far"
+	elif len(completed_levels) == 10:
+		completed_levels_notification = "All levels are completed!"
+	# Change the text of the label
+	completed_levels_label.text = completed_levels_notification
