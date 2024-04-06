@@ -1,10 +1,25 @@
-[gd_scene load_steps=13 format=3 uid="uid://7xwbm6q813au"]
+[gd_scene load_steps=15 format=3 uid="uid://7xwbm6q813au"]
 
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_1lio2"]
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="2_71aw8"]
+[ext_resource type="Script" path="res://Level/ClockwiseCamera3D.gd" id="2_eht75"]
 [ext_resource type="Texture2D" uid="uid://ds6utachq17p3" path="res://Level/level_5.png" id="2_kg7md"]
 [ext_resource type="PackedScene" uid="uid://jub3svcbyt6m" path="res://Level/back_button.tscn" id="4_1gi2i"]
 [ext_resource type="PackedScene" uid="uid://cpl1i1vspi4jd" path="res://level_label.tscn" id="5_xywd6"]
+
+[sub_resource type="GDScript" id="GDScript_0wa72"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u31xn"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -31,6 +46,7 @@ albedo_color = Color(1, 0, 0.0352941, 1)
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="Level" type="Node3D"]
+script = SubResource("GDScript_0wa72")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dovew")
@@ -60,8 +76,9 @@ script = ExtResource("1_1lio2")
 file_path = "res://Level/level_6.tscn"
 level_number = 5
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="ClockwiseCamera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 21.5, 0)
+script = ExtResource("2_eht75")
 
 [node name="Player" parent="." instance=ExtResource("2_71aw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.423, 0.6, -9.126)
@@ -290,6 +307,6 @@ size = Vector3(0.5, 2, 21.32)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="LevelLabelControl" parent="." instance=ExtResource("5_xywd6")]
-level_description = "Level 5: 9 X 9"
+level_description = "Level 5: Clockwise rotation"
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_1gi2i")]

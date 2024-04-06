@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwolqfgbdv6c1"]
+[gd_scene load_steps=14 format=3 uid="uid://cwolqfgbdv6c1"]
 
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_sbr3c"]
+[ext_resource type="Script" path="res://Level/CounterclockwiseCamera3D.gd" id="2_efstj"]
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="2_s0ukj"]
 [ext_resource type="Texture2D" uid="uid://c7su0cpk86jsq" path="res://Level/level_6.png" id="2_yopi8"]
 [ext_resource type="PackedScene" uid="uid://jub3svcbyt6m" path="res://Level/back_button.tscn" id="4_ymit6"]
@@ -60,8 +61,9 @@ script = ExtResource("1_sbr3c")
 file_path = "res://Level/level_7.tscn"
 level_number = 6
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="CounterclockwiseCamera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 24.5, 0)
+script = ExtResource("2_efstj")
 
 [node name="Player" parent="." instance=ExtResource("2_s0ukj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.285, 0.6, -10.829)
@@ -380,6 +382,6 @@ size = Vector3(0.5, 2, 23.67)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="LevelLabelControl" parent="." instance=ExtResource("5_lv17s")]
-level_description = "Level 6: 10 X 10"
+level_description = "Level 6: Counterclockwise rotation "
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_ymit6")]
