@@ -170,6 +170,6 @@ size = Vector3(0.5, 2, 2.5)
 material = SubResource("StandardMaterial3D_h3055")
 
 [node name="LevelLabelControl" parent="." instance=ExtResource("5_lthx7")]
-level_description = "Level 1: 5 X 5"
+level_description = "Level 1: Let's start simple"
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_nso7i")]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpie2rvnvyeiv"]
+[gd_scene load_steps=14 format=3 uid="uid://bpie2rvnvyeiv"]
 
+[ext_resource type="Script" path="res://Level/level_2.gd" id="1_kd5gu"]
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_pww1t"]
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="2_2dkny"]
 [ext_resource type="Texture2D" uid="uid://bygvtjmr0asrc" path="res://Level/level_2.png" id="3_yu03l"]
@@ -31,6 +32,7 @@ albedo_color = Color(1, 0, 0.0352941, 1)
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="Level" type="Node3D"]
+script = ExtResource("1_kd5gu")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dovew")
@@ -212,6 +214,6 @@ size = Vector3(0.5, 2, 2.77)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="LevelLabelControl" parent="." instance=ExtResource("5_vvv17")]
-level_description = "Level 2: 6 X 6"
+level_description = "Level 2: Inverted controls"
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_hpj5f")]
