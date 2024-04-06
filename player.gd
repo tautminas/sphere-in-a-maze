@@ -5,6 +5,7 @@ extends RigidBody3D
 
 ## How much force to apply when jumping.
 @export var thrust: float = 2500.0
+@export var bounce: float = 900.0
 
 @onready var level_completion_particles: GPUParticles3D = $LevelCompletionParticles
 
@@ -29,6 +30,11 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node) -> void:
+	if "Bounce" in body.get_groups():
+		apply_central_force(Vector3.UP * bounce)
+		if abs(global_position.x) > 19 or abs(global_position.z) > 14:
+			get_tree().reload_current_scene()
+	
 	if "Goal" in body.get_groups():
 		complete_level(body.file_path)
 		save_completed_level(body.level_number)
