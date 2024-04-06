@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://dj0phsm0ynuog"]
+[gd_scene load_steps=14 format=3 uid="uid://dj0phsm0ynuog"]
 
+[ext_resource type="Script" path="res://Level/level_4.gd" id="1_m7s1n"]
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_mjetw"]
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="2_62f4o"]
 [ext_resource type="Texture2D" uid="uid://beqqr2tjnoq3u" path="res://Level/level_4.png" id="2_plleg"]
@@ -31,6 +32,7 @@ albedo_color = Color(1, 0, 0.0352941, 1)
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="Level" type="Node3D"]
+script = ExtResource("1_m7s1n")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dovew")
@@ -60,7 +62,7 @@ script = ExtResource("1_mjetw")
 file_path = "res://Level/level_5.tscn"
 level_number = 4
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="ZoomedInCamera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20.5, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_62f4o")]
@@ -260,6 +262,6 @@ size = Vector3(0.5, 2, 19)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="LevelLabelControl" parent="." instance=ExtResource("5_w4bfw")]
-level_description = "Level 4: 8 X 8"
+level_description = "Level 4: Zoomed in camera"
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_bdkrh")]
