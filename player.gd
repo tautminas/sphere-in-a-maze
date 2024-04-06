@@ -6,6 +6,8 @@ extends RigidBody3D
 ## How much force to apply when jumping.
 @export var thrust: float = 2500.0
 
+@onready var level_completion_particles: GPUParticles3D = $LevelCompletionParticles
+
 const LEVEL_DATA_PATH = "res://level_data.json"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,6 +32,7 @@ func _on_body_entered(body: Node) -> void:
 	if "Goal" in body.get_groups():
 		complete_level(body.file_path)
 		save_completed_level(body.level_number)
+		level_completion_particles.emitting = true
 
 
 func complete_level(next_level_file: String) -> void:

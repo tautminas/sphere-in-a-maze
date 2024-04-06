@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyhvniedkv4gs"]
+[gd_scene load_steps=6 format=3 uid="uid://cyhvniedkv4gs"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_ummwh"]
+[ext_resource type="PackedScene" uid="uid://dandqoanxrpxd" path="res://Particles/level_completion_particles.tscn" id="2_e86os"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dpyo"]
 albedo_color = Color(0.00408723, 0.139794, 0.149384, 1)
@@ -22,5 +23,7 @@ mesh = SubResource("SphereMesh_xnhxw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_wtmt5")
+
+[node name="LevelCompletionParticles" parent="." instance=ExtResource("2_e86os")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
