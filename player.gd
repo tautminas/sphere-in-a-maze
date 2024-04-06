@@ -7,6 +7,7 @@ extends RigidBody3D
 @export var thrust: float = 2500.0
 
 @onready var level_completion_particles: GPUParticles3D = $LevelCompletionParticles
+@onready var death_particles: GPUParticles3D = $DeathParticles
 
 const LEVEL_DATA_PATH = "res://level_data.json"
 var bounce: float
@@ -38,6 +39,14 @@ func _on_body_entered(body: Node) -> void:
 		apply_central_force(Vector3.UP * bounce)
 		if abs(global_position.x) > 19 or abs(global_position.z) > 14:
 			get_tree().reload_current_scene()
+	
+	if "Death" in body.get_groups():
+		set_process(false)
+		var tween = create_tween()
+		tween.tween_interval(1.0)
+		tween.tween_callback(func() -> void:get_tree().reload_current_scene())
+		death_particles.emitting = true
+
 	
 	if "Goal" in body.get_groups():
 		complete_level(body.file_path)
