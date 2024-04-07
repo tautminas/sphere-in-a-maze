@@ -4,3 +4,6 @@
 *.tmp
 
 level_data.json
+
+Export/
+export_presets.cfg
