@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm50d1quf53qc"]
+[gd_scene load_steps=10 format=3 uid="uid://dm50d1quf53qc"]
 
 [ext_resource type="Script" path="res://Menu/controls.gd" id="1_trj6f"]
 [ext_resource type="Texture2D" uid="uid://yxbr0ghdt4ys" path="res://Menu/background.png" id="2_yrn6f"]
+[ext_resource type="Texture2D" uid="uid://qsdtqwl82us" path="res://arrow-up.svg" id="3_wb60y"]
+[ext_resource type="Texture2D" uid="uid://bqvchol65r35m" path="res://arrow-down.svg" id="4_g2bei"]
+[ext_resource type="Texture2D" uid="uid://bt5ff5uoubkor" path="res://arrow-left.svg" id="5_60bbx"]
+[ext_resource type="Texture2D" uid="uid://bej0sf3hqy16u" path="res://arrow-right.svg" id="6_dv8uu"]
 
 [sub_resource type="SystemFont" id="SystemFont_gqbmd"]
 font_names = PackedStringArray("Monospace")
@@ -55,12 +59,48 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_gqbmd")
 theme_override_font_sizes/font_size = 40
-text = "Up: ↑ / W
-Left: ← / A
-Right: → / D
-Down: ↓ / S"
+text = "Up:   / W
+Left:   / A
+Right:   / D
+Down:   / S"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ArrowUp" type="TextureRect" parent="MarginContainer/Label"]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 14.0
+offset_right = 394.0
+offset_bottom = 41.0
+texture = ExtResource("3_wb60y")
+expand_mode = 1
+
+[node name="ArrowDown" type="TextureRect" parent="MarginContainer/Label"]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 163.0
+offset_right = 417.0
+offset_bottom = 190.0
+texture = ExtResource("4_g2bei")
+expand_mode = 1
+
+[node name="ArrowLeft" type="TextureRect" parent="MarginContainer/Label"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 71.0
+offset_right = 424.0
+offset_bottom = 85.0
+texture = ExtResource("5_60bbx")
+expand_mode = 1
+
+[node name="ArrowRight" type="TextureRect" parent="MarginContainer/Label"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 121.0
+offset_right = 436.0
+offset_bottom = 133.0
+texture = ExtResource("6_dv8uu")
+expand_mode = 1
 
 [node name="MenuButton" type="Button" parent="."]
 layout_mode = 1
