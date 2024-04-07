@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dq21jh8m0umwa"]
+[gd_scene load_steps=14 format=3 uid="uid://dq21jh8m0umwa"]
 
 [ext_resource type="Script" path="res://Level/EndPad.gd" id="1_438u6"]
+[ext_resource type="Script" path="res://Level/level_9.gd" id="1_i4hwe"]
 [ext_resource type="Texture2D" uid="uid://g7d77cweiuwf" path="res://Level/level_9.png" id="2_70705"]
 [ext_resource type="PackedScene" uid="uid://cyhvniedkv4gs" path="res://player.tscn" id="2_ptnlq"]
 [ext_resource type="PackedScene" uid="uid://jub3svcbyt6m" path="res://Level/back_button.tscn" id="4_cen75"]
@@ -31,6 +32,7 @@ albedo_color = Color(1, 0, 0.0352941, 1)
 albedo_color = Color(0, 0, 0, 1)
 
 [node name="Level" type="Node3D"]
+script = ExtResource("1_i4hwe")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dovew")
@@ -60,7 +62,7 @@ script = ExtResource("1_438u6")
 file_path = "res://Level/level_10.tscn"
 level_number = 9
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="ZoomingOutCamera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 32, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_ptnlq")]
@@ -524,6 +526,6 @@ size = Vector3(0.5, 2, 31.5)
 material = SubResource("StandardMaterial3D_2ppxr")
 
 [node name="LevelLabelControl" parent="." instance=ExtResource("5_eiaqa")]
-level_description = "Level 9: 13 X 13"
+level_description = "Level 9: Zooming out camera"
 
 [node name="BackButtonControl" parent="." instance=ExtResource("4_cen75")]
