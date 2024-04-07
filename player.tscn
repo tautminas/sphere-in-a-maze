@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_ummwh"]
 [ext_resource type="PackedScene" uid="uid://dandqoanxrpxd" path="res://Particles/level_completion_particles.tscn" id="2_e86os"]
-[ext_resource type="PackedScene" path="res://Particles/death_particles.tscn" id="3_c8wgf"]
+[ext_resource type="PackedScene" uid="uid://dcecb8hw7dbrv" path="res://Particles/death_particles.tscn" id="3_c8wgf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dpyo"]
 albedo_color = Color(0.00408723, 0.139794, 0.149384, 1)

@@ -5,6 +5,7 @@ extends RigidBody3D
 
 ## How much force to apply when jumping.
 @export var thrust: float = 2500.0
+@export var has_reached_the_goal: bool = false
 
 @onready var level_completion_particles: GPUParticles3D = $LevelCompletionParticles
 @onready var death_particles: GPUParticles3D = $DeathParticles
@@ -46,9 +47,9 @@ func _on_body_entered(body: Node) -> void:
 		tween.tween_interval(1.0)
 		tween.tween_callback(func() -> void:get_tree().reload_current_scene())
 		death_particles.emitting = true
-
 	
 	if "Goal" in body.get_groups():
+		has_reached_the_goal = true
 		complete_level(body.file_path)
 		save_completed_level(body.level_number)
 		level_completion_particles.emitting = true
