@@ -223,4 +223,4 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_3p4vy")
-text = "Test"
+text = "Information about completion of levels"
