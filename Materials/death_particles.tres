@@ -1,0 +1,37 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=7 format=3 uid="uid://dyyfmgy751v83"]
+
+[sub_resource type="Gradient" id="Gradient_lkolc"]
+offsets = PackedFloat32Array(0.201923, 0.413462, 0.586538, 0.740385, 0.903846)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 0, 1, 1, 0.294118, 0, 1, 0.776471, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u3rij"]
+gradient = SubResource("Gradient_lkolc")
+
+[sub_resource type="Curve" id="Curve_cv3ok"]
+max_value = 100.0
+_data = [Vector2(0, 1), 0.0, 146.581, 0, 0, Vector2(1, 100), 413.249, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_mygan"]
+curve = SubResource("Curve_cv3ok")
+
+[sub_resource type="Curve" id="Curve_qubh3"]
+_data = [Vector2(0, 0.530249), 0.0, 2.25724, 0, 0, Vector2(1, 0), -2.97204, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5bhb0"]
+curve = SubResource("Curve_qubh3")
+
+[resource]
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 6.0
+initial_velocity_max = 16.0
+gravity = Vector3(0, 0, 0)
+damping_max = 3.0
+damping_curve = SubResource("CurveTexture_mygan")
+scale_curve = SubResource("CurveTexture_5bhb0")
+color_ramp = SubResource("GradientTexture1D_u3rij")
+turbulence_enabled = true
+turbulence_noise_scale = 1.0
+turbulence_noise_speed_random = 4.0

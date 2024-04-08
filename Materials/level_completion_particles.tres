@@ -1,0 +1,31 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=5 format=3 uid="uid://co7cftikiycr6"]
+
+[sub_resource type="Curve" id="Curve_qubh3"]
+_data = [Vector2(0, 0.530249), 0.0, 2.25724, 0, 0, Vector2(1, 0), -2.97204, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_oh0x3"]
+curve = SubResource("Curve_qubh3")
+
+[sub_resource type="Curve" id="Curve_uupei"]
+_data = [Vector2(0, 0.5), 0.0, 2.46667, 0, 1, Vector2(0.202703, 1), 0.0, 0.0, 0, 0, Vector2(0.371622, 0.00355875), 0.0, 0.0, 0, 0, Vector2(0.554054, 1), 0.0, 0.0, 0, 0, Vector2(0.777027, 0), 0.0, 0.0, 0, 0, Vector2(0.885135, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), -4.35294, 0.0, 1, 0]
+point_count = 7
+
+[sub_resource type="CurveTexture" id="CurveTexture_68duu"]
+curve = SubResource("Curve_uupei")
+
+[resource]
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 3.0
+initial_velocity_max = 12.0
+gravity = Vector3(0, 0, 0)
+damping_min = 2.0
+damping_max = 4.0
+scale_curve = SubResource("CurveTexture_oh0x3")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+turbulence_enabled = true
+turbulence_noise_scale = 4.0
+turbulence_influence_max = 0.3
+turbulence_influence_over_life = SubResource("CurveTexture_68duu")
