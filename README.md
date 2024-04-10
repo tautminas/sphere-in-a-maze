@@ -2,7 +2,7 @@
 
 ## About the game
 
-You can access the game via this link: https://tautminas.itch.io/sphere-in-a-maze
+The game can be accessed via this link: https://tautminas.itch.io/sphere-in-a-maze
 
 Sphere in a maze is a game made with [Godot](https://godotengine.org/) 4.2.1 version. In this game, you'll navigate through challenging mazes, amplified with a variety of distractions, providing a unique gameplay experience.
 
