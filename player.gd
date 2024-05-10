@@ -15,6 +15,8 @@ var bounce: float
 const BOUNCE_LOWER_BOUNDARY: float = 300.0
 const BOUNCE_UPPER_BOUNDARY: float = 900.0
 
+@onready var success_audio: AudioStreamPlayer = $SuccessAudio
+@onready var explosion_audio: AudioStreamPlayer = $ExplosionAudio
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -48,12 +50,16 @@ func _on_body_entered(body: Node) -> void:
 		tween.tween_interval(1.0)
 		tween.tween_callback(func() -> void:get_tree().reload_current_scene())
 		death_particles.emitting = true
+		if not explosion_audio.is_playing():
+			explosion_audio.play()
 	
 	if "Goal" in body.get_groups():
 		has_reached_the_goal = true
 		complete_level(body.file_path)
 		save_completed_level(body.level_number)
 		level_completion_particles.emitting = true
+		if not success_audio.is_playing():
+			success_audio.play()
 
 
 func complete_level(next_level_file: String) -> void:
