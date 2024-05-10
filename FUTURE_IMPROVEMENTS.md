@@ -2,14 +2,12 @@
 
 Possibilities:
 
-- Add sound to the game.
+- Add particles to the web version. Currently, particels take too much time to load on the exported web version. 
 - Make variations for the levels more engaging. Add more levels (e.g. show the level for some time and solve the maze in the dark afterwards).
-- Solve shader stuttering in game loading and not in level loading.
 - Add arrows instead of words in controls scene.
 - Beautify the UI.
-- Optimise shaders for the web.
 
 Refactor the code 🙂:
 
+- Add all the files to Scenes, Scripts and Assets folders.
 - Extract repeated game elements to new scenes (floors, menu buttons).
-- Move the player scene to Level directory (same goes for the level label).
